@@ -1,0 +1,137 @@
+/*
+ * getInt.c
+ *
+ *  Created on: 12 abr. 2022
+ *      Author: lapir
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int getInt(int *input,char mensaje[],char errorMensaje[], int minimo, int maximo, int reintentos)
+{
+	int retorno = -1;
+	int bufferInt;
+
+	if(input != NULL && mensaje != NULL && errorMensaje != NULL && minimo <= maximo && reintentos >= 0)
+	{
+		do
+		{
+			printf("%s",mensaje);
+			scanf("%d",&bufferInt);
+			if(bufferInt >= minimo && bufferInt <= maximo)
+			{
+				*input = bufferInt;
+				retorno = 0;
+				break;
+			}
+				printf("%s",errorMensaje);
+				reintentos--;
+
+		}while(reintentos >= 0);
+	}
+
+
+	return retorno;
+}
+
+
+int getFloat(float *input,char mensaje[],char errorMensaje[],float minimo,float maximo,int reintentos)
+{
+	int retorno = -1;
+	float bufferFloat;
+
+	if(input != NULL && mensaje != NULL && errorMensaje != NULL && minimo <= maximo && reintentos >= 0)
+	{
+		do
+		{
+			printf("%s",mensaje);
+			scanf("%f",&bufferFloat);
+
+			if(bufferFloat >= minimo && bufferFloat <= maximo)
+			{
+				*input = bufferFloat;
+				retorno = 0;
+				break;
+			}
+			printf("%s" ,errorMensaje);
+			reintentos--;
+
+		}while(reintentos >= 0);
+	}
+
+
+
+
+	return retorno;
+}
+
+
+int getChar(char *inPut, char *mensaje, char *errorMensaje,char minimo, char maximo,int reintentos)
+{
+	int retorno = -1;
+	char bufferChar;
+
+	if(inPut != NULL && mensaje != NULL && errorMensaje != NULL && minimo <= maximo && reintentos >= 0 )
+	{
+		do
+		{
+			printf("%s",mensaje);
+			scanf("%c",&bufferChar);
+			fflush(stdin);
+
+
+			if(bufferChar >= minimo && bufferChar <= maximo )
+			{
+				*inPut = bufferChar;
+				retorno = 0;
+				break;
+			}
+			else
+			{
+				printf("%s",errorMensaje);
+				reintentos--;
+
+			}
+		}while (reintentos >=0);
+
+	}
+
+	return retorno;
+}
+
+int getFloatMinimo(float *input,char mensaje[],char errorMensaje[],float minimo,int reintentos)
+{
+	int retorno = -1;
+	float bufferFloat;
+
+	if(input != NULL && mensaje != NULL && errorMensaje != NULL && minimo >= 1 && reintentos >= 0)
+	{
+		do
+		{
+			printf("%s",mensaje);
+			scanf("%f",&bufferFloat);
+
+			if(bufferFloat >  minimo )
+			{
+				*input = bufferFloat;
+				retorno = 0;
+				break;
+			}
+			printf("%s" ,errorMensaje);
+			reintentos--;
+
+		}while(reintentos >= 0);
+	}
+
+
+
+
+	return retorno;
+}
+
+
+
+
+

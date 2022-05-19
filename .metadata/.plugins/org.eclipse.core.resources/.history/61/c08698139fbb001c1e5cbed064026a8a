@@ -1,0 +1,67 @@
+/*
+ * getInt.h
+ *
+ *  Created on: 12 abr. 2022
+ *      Author: lapir
+ */
+
+#ifndef BIBLIOTECAUTN_H_
+#define BIBLIOTECAUTN_H_
+/**
+ * funcion para pedir y verificar un numero entero.Retora un entero y un puntero.
+ * char *inPut: puntero input retorna el valor tipo entero..
+ * char mensaje[]: parametro para dar un mensaje.
+ * char errorMensaje[]: parametro para dar mensaje en caso de error.
+ * char minimo: parametro para validar en un cierto rango. aca indico minimo.
+ * char maximo: parametro para validar en un cierto rango. aca indico maximo.
+ * int reintentos: parametro para dar cierta cantidad de reintentos.
+ *  return: en caso de exito [0], en caso de error [-1]
+ *
+ */
+int getInt(int *input,char mensaje[],char errorMensaje[], int minimo, int maximo, int reintentos);
+
+
+/**
+ * funcion para pedir y verificar un caracter .Retora un caracter y un puntero.
+ * char *inPut: puntero input asigna valor de un caracter..
+ * char mensaje[]: parametro para dar un mensaje.
+ * char errorMensaje[]: parametro para dar mensaje en caso de error.
+ * char minimo: parametro para validar en un cierto rango de caracteres, aca indico minimo.
+ * char maximo: parametro para validar en un cierto rango de caracteres, aca indico maximo.
+ * int reintentos: parametro para dar cierta cantidad de reintentos.
+ * return: en caso de exito [0], en caso de error [-1]
+ *
+ */
+int getChar(char *inPut, char *mensaje, char *errorMensaje,char minimo, char maximo,int reintentos);
+
+
+/**
+ * * funcion para pedir y verificar un numero tipo float con minimo y maximo Retora un entero y un puntero.
+ * float *inPutpuntero input retorna el valor tipo float.
+ * char mensaje[]: parametro para dar un mensaje.
+ * char errorMensaje[]: parametro para dar mensaje en caso de error.
+ * float minimo: parametro para validar en un cierto rango flotante. aca indico minimo.
+ * float maximo: parametro para validar en un cierto rango flotante. aca indico maximo.
+ * int reintentos: parametro entero para dar cierta cantidad de reintentos.
+ *  return: en caso de exito [0], en caso de error [-1]
+ *
+ */
+int getFloat(float *input,char mensaje[],char errorMensaje[],float minimo,float maximo,int reintentos);
+
+/**
+ * * funcion para pedir y verificar un numero tipo float solo con minimo Retora un entero y un puntero.
+ * float *inPutpuntero input retorna el valor tipo float.
+ * char mensaje[]: parametro para dar un mensaje.
+ * char errorMensaje[]: parametro para dar mensaje en caso de error.
+ * float minimo: parametro para validar en un cierto rango flotante. aca indico minimo.
+ * int reintentos: parametro entero para dar cierta cantidad de reintentos.
+ *  return: en caso de exito [0], en caso de error [-1]
+ *
+ */
+int getFloatMinimo(float *input,char mensaje[],char errorMensaje[],float minimo,int reintentos);
+
+
+
+
+
+#endif /* BIBLIOTECAUTN_H_ */
